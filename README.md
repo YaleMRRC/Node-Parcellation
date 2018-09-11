@@ -1,28 +1,22 @@
 # Node-Parcellation
-This is the documentation file for "priority-based exemplar parcellation" of human brain. 
+This is the documentation file for "Spatially-constrained exemplar-based node parcellation" of the human brain at the individual- and state-specific level.
 
-The node-level individualized parcellation is implemented in C++, and is part of the open-source BioImage Suite Project. To run these files, you need to download BioImageSuite source code from:
+The parcellation algorithm is implemented in C++, and is part of the open-source BioImage Suite Project. To run these files, you need to download BioImageSuite source code from:
 
-After downloading BioImage Suite source code, in the folder named "bioimagesuite32_0b1_src"
-move the file 'vtkbisIndividualizeParcellation.cpp' to 
+After downloading BioImage Suite source code (under the name "bioimagesuite32_0b1_src"), follow the below steps:
 
-and '/bioimagesuite/bis_algorithm/bis_individualizeconnectivity.tcl'
+1- Move the file 'vtkbisIndividualizeParcellation.cpp' to '/bioimagesuite32_0b1_src/Connectivity/'
 
+2- Move the file 'bis_individualizeconnectivity.tcl' to '/bioimagesuite32_0b1_src/bioimagesuite/bis_algorithm/'
 
-How to?
+3- Build the package according to the BioImageSuite mannual (see http://bioimagesuite.yale.edu/manual/index.aspx)
 
-1- Build the package according to the BioImageSuite mannual (see http://bioimagesuite.yale.edu/manual/index.aspx)
-2- Make sure you set the path:
+4- Make sure you set the environment path, by running the following command:
 source bioimagesuite32_0b1_src/build/setpaths.csh
 
-3- you can run the individualzied parcellation with the following command:
-
-bis_individualizeconnectivity.tcl -inp individual_fmri_data.nii.gz -inp2 group_parcellation_scheme.hdr -num_exemplar K
-
-where K is the number of exempalrs (or nodes) that you want to parcellate to. K should match the group-level parcellation. Here for the Shen parcellation K=268 for whole brain analysis and K=188 for the cortical regions.
-
-The .m file calculate the homogeneity and DB indices for the group-level and individualized parcellations (see the paper).
-For the .m file, note that you need to have NIFTI package in your MATLAB path to run the .m file.
+5- Finally, the individualzied parcellation algorithm can be called using the following command:
+bis_individualizeconnectivity.tcl -inp *INPUT NII FILE (VOXEL-LEVEL TIME SERIES)* -inp2 *INITIAL GROUP-LEVEL PARCELLATION*  -indiv_group *1 TO GENERATE INDIVIDUALIZED FILE* -blursigma *SMOOTHIN KERNEL BANDWIDTH* -num_exemplar *NUMBER OF NODES*
 
 
-1- First, download t
+The number of nodes should match the group-level parcellation. Here for *Shen* parcellation, the number of nodes is 268 for whole brain analysis, and 188 for cortical analysis.
+
