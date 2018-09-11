@@ -15,7 +15,7 @@ After downloading BioImage Suite source code (under the name "bioimagesuite32_0b
 source bioimagesuite32_0b1_src/build/setpaths.csh
 
 5- Finally, the individualzied parcellation algorithm can be called using the following command:
-bis_individualizeconnectivity.tcl -inp *Input* -inp2 *Parc*  -indiv_group *1* -blursigma *BW* -num_exemplar *K*
+**bis_individualizeconnectivity.tcl -inp** *Input* **-inp2** *Parc*  **-indiv_group** *1* **-blursigma** *BW* **-num_exemplar** *K*
 
 - *Input* is the .nii file containing the voxel-level time series.
 
