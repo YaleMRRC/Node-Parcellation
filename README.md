@@ -15,8 +15,16 @@ After downloading BioImage Suite source code (under the name "bioimagesuite32_0b
 source bioimagesuite32_0b1_src/build/setpaths.csh
 
 5- Finally, the individualzied parcellation algorithm can be called using the following command:
-bis_individualizeconnectivity.tcl -inp *INPUT NII FILE (VOXEL-LEVEL TIME SERIES)* -inp2 *INITIAL GROUP-LEVEL PARCELLATION*  -indiv_group *1 TO GENERATE INDIVIDUALIZED FILE* -blursigma *SMOOTHIN KERNEL BANDWIDTH* -num_exemplar *NUMBER OF NODES*
+bis_individualizeconnectivity.tcl -inp *Input* -inp2 *Parc*  -indiv_group *1* -blursigma *BW* -num_exemplar *K*
 
+- *Input* is the .nii file containing the voxel-level time series.
 
-The number of nodes should match the group-level parcellation. Here for *Shen* parcellation, the number of nodes is 268 for whole brain analysis, and 188 for cortical analysis.
+- *Parc* is the initial group-level parcellation that the algorihtm starts from. Please refer to the manuscript for more details.
+
+- indiv_group option should be set to *1* in order to generate individualized parcellations, as well as the functional connectivity matrices using the individualize partcellations. If it is set to *0*, it will only output the functional connectivity matrices, using initial group-level parcellation.
+
+- *BW* is the smoothing kernel's bandwidth. In the original work, we set *BW=4*.
+
+- *K* is the number of nodes in the parcellation. *K* should match the group-level parcellation. Here for *Shen* parcellation, *K=268* for whole brain analysis, and *K=188* for cortical analysis.
+
 
