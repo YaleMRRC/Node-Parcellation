@@ -1,19 +1,18 @@
 # Node-Parcellation
 This is the documentation file for **spatially-constrained exemplar-based node parcellation** of the human brain at the individual- and state-specific level. For more details, please see Salehi et al., 2017 [1] and Salehi et al., 2018 [2].
 
-The parcellation algorithm is implemented in C++, and is part of the open-source BioImage Suite Project. To run these files, you need to download BioImageSuite source code from: https://www.nitrc.org/projects/bioimagesuite
+The parcellation algorithm is implemented in C++, and is part of the open-source BioImage Suite Project. To run these files, you need to download BioImageSuite source code from [here] (https://www.nitrc.org/projects/bioimagesuite). After downloading BioImage Suite source code (under the name "bioimagesuite32_0b1_src"), you can run the individualized parcellation algorithm via the following:
 
-After downloading BioImage Suite source code (under the name "bioimagesuite32_0b1_src"), follow the below steps:
+1. Move the file 'vtkbisIndividualizeParcellation.cpp' to '/bioimagesuite32_0b1_src/Connectivity/'
 
-1- Move the file 'vtkbisIndividualizeParcellation.cpp' to '/bioimagesuite32_0b1_src/Connectivity/'
+2. Move the file 'bis_individualizeconnectivity.tcl' to '/bioimagesuite32_0b1_src/bioimagesuite/bis_algorithm/'
 
-2- Move the file 'bis_individualizeconnectivity.tcl' to '/bioimagesuite32_0b1_src/bioimagesuite/bis_algorithm/'
+3. Build the package according to the BioImageSuite mannual (see http://bioimagesuite.yale.edu/manual/index.aspx)
 
-3- Build the package according to the BioImageSuite mannual (see http://bioimagesuite.yale.edu/manual/index.aspx)
-
-4- Make sure you set the environment path, by running the following command:
+4. Make sure you set the environment path, by running the following command:
+```bash
 source bioimagesuite32_0b1_src/build/setpaths.csh
-
+```
 5- Finally, the individualzied parcellation algorithm can be called using the following command:
 **bis_individualizeconnectivity.tcl -inp** *input* **-inp2** *parc*  **-indiv_group** *1* **-blursigma** *BW* **-num_exemplar** *K*
 
