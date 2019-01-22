@@ -1,7 +1,7 @@
 # Node-Parcellation
 
 <p align="center">
-	<img src ="images/node_parcellation_alg.png" height="10"  />
+	<img src ="images/node_parcellation_alg.png" height="200"  />
 </p>
 
 This is the documentation file for **spatially-constrained exemplar-based node parcellation** of the human brain at the individual- and state-specific level. For more details, please see Salehi et al., 2017 [1] and Salehi et al., 2018 [2].
