@@ -31,6 +31,8 @@ bis_individualizeconnectivity.tcl -inp $input -inp2 $parc  -indiv_group 1 -blurs
 For further questions please raise an issue [here](https://github.com/YaleMRRC/Node-Parcellation/issues).
 
 
+### References
+
 [1] Salehi, M., Karbasi, A., Scheinost, D., & Constable, R. T. (2017, September). A submodular approach to create individualized parcellations of the human brain. In International Conference on Medical Image Computing and Computer-Assisted Intervention (pp. 478-485). Springer, Cham.
 
 [2] Salehi, M., Greene, A. S., Karbasi, A., Shen, X., Scheinost, D., & Constable, R. T. (2018). There is no single functional atlas even for a single individual: Parcellation of the human brain is state dependent. bioRxiv, 431833.
