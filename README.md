@@ -13,8 +13,10 @@ The parcellation algorithm is implemented in C++, and is part of the open-source
 ```bash
 source bioimagesuite32_0b1_src/build/setpaths.csh
 ```
-5- Finally, the individualzied parcellation algorithm can be called using the following command:
-**bis_individualizeconnectivity.tcl -inp** *input* **-inp2** *parc*  **-indiv_group** *1* **-blursigma** *BW* **-num_exemplar** *K*
+5. Execute the the individualzied parcellation algorithm using the following command:
+``` bash
+bis_individualizeconnectivity.tcl -inp **input** -inp2 *parc*  **-indiv_group** *1* **-blursigma** *BW* **-num_exemplar** *K*
+```
 
 - *input* is the .nii file containing the voxel-level time series.
 
