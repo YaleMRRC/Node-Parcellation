@@ -15,7 +15,7 @@ source bioimagesuite32_0b1_src/build/setpaths.csh
 ```
 5. Execute the the individualzied parcellation algorithm using the following command:
 ``` bash
-bis_individualizeconnectivity.tcl -inp **input** -inp2 *parc*  **-indiv_group** *1* **-blursigma** *BW* **-num_exemplar** *K*
+bis_individualizeconnectivity.tcl -inp $input -inp2 $parc  -indiv_group 1 -blursigma $BW -num_exemplar $K
 ```
 
 - *input* is the .nii file containing the voxel-level time series.
