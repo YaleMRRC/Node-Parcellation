@@ -18,20 +18,22 @@ source bioimagesuite32_0b1_src/build/setpaths.csh
 bis_individualizeconnectivity.tcl -inp $input -inp2 $parc  -indiv_group 1 -blursigma $BW -num_exemplar $K
 ```
 
-- *input* is the .nii file containing the voxel-level time series.
+- **$input** is the .nii file containing the voxel-level time series.
 
-- *parc* is the initial group-level parcellation that the algorihtm starts from. Please refer to the manuscript for more details.
+- **$parc** is the initial group-level parcellation that the algorihtm starts from. Please refer to the manuscript for more details.
 
-- indiv_group option should be set to *1* in order to generate individualized parcellations, as well as the functional connectivity matrices using the individualize partcellations. If it is set to *0*, it will only output the functional connectivity matrices, using initial group-level parcellation.
+- **indiv_group** option should be set to **1** to generate individualized parcellations, as well as the functional connectivity matrices using the individualize partcellations. If set to **0**, it will only output the functional connectivity matrices, using initial group-level parcellation.
 
-- *BW* is the smoothing kernel's bandwidth. In the original work, we set *BW=4*.
+- **$BW** is the smoothing kernel's bandwidth. In the original work, we set **BW=4**.
 
-- *K* is the number of nodes in the parcellation. *K* should match the group-level parcellation. Here for *Shen* parcellation, *K=268* for whole brain analysis, and *K=188* for cortical analysis.
+- **$K** is the number of nodes in the parcellation. **K** should match the group-level parcellation. Here we used the parcelation by Shen et al. [3], where **K=268** for whole brain analysis, and **K=188** for cortical analysis.
+
+For further questions please raise an issue [here](https://github.com/YaleMRRC/Node-Parcellation/issues).
 
 
 [1] Salehi, M., Karbasi, A., Scheinost, D., & Constable, R. T. (2017, September). A submodular approach to create individualized parcellations of the human brain. In International Conference on Medical Image Computing and Computer-Assisted Intervention (pp. 478-485). Springer, Cham.
 
 [2] Salehi, M., Greene, A. S., Karbasi, A., Shen, X., Scheinost, D., & Constable, R. T. (2018). There is no single functional atlas even for a single individual: Parcellation of the human brain is state dependent. bioRxiv, 431833.
 
-
+[3] Shen, X., Tokoglu, F., Papademetris, X., & Constable, R. T. (2013). Groupwise whole-brain parcellation from resting-state fMRI data for network node identification. Neuroimage, 82, 403-415.
 
