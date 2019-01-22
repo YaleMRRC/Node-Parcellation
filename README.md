@@ -1,5 +1,5 @@
 # Node-Parcellation
-This is the documentation file for "Spatially-constrained exemplar-based node parcellation" of the human brain at the individual- and state-specific level.
+This is the documentation file for **spatially-constrained exemplar-based node parcellation** of the human brain at the individual- and state-specific level. For more details, please see Salehi et al., 2017 [1] and Salehi et al., 2018 [2].
 
 The parcellation algorithm is implemented in C++, and is part of the open-source BioImage Suite Project. To run these files, you need to download BioImageSuite source code from: https://www.nitrc.org/projects/bioimagesuite
 
@@ -26,5 +26,11 @@ source bioimagesuite32_0b1_src/build/setpaths.csh
 - *BW* is the smoothing kernel's bandwidth. In the original work, we set *BW=4*.
 
 - *K* is the number of nodes in the parcellation. *K* should match the group-level parcellation. Here for *Shen* parcellation, *K=268* for whole brain analysis, and *K=188* for cortical analysis.
+
+
+[1] Salehi, M., Karbasi, A., Scheinost, D., & Constable, R. T. (2017, September). A submodular approach to create individualized parcellations of the human brain. In International Conference on Medical Image Computing and Computer-Assisted Intervention (pp. 478-485). Springer, Cham.
+
+[2] Salehi, M., Greene, A. S., Karbasi, A., Shen, X., Scheinost, D., & Constable, R. T. (2018). There is no single functional atlas even for a single individual: Parcellation of the human brain is state dependent. bioRxiv, 431833.
+
 
 
