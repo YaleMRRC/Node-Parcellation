@@ -1,7 +1,7 @@
 # Node-Parcellation
 
 <p align="center">
-	<img src ="images/node_parcellation_alg.png" height="250"  />
+	<img src ="images/node_parcellation_alg.png" height="275"  />
 </p>
 
  
